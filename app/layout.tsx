@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { MotionController } from '@/components/motion-controller';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -32,5 +33,5 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="ar" dir="rtl"><head><link rel="preload" href="/fonts/GraphikArabic-Bold.ttf" as="font" type="font/ttf" crossOrigin="anonymous" /></head><body>{children}<script src="/motion.js" defer /></body></html>;
+  return <html lang="ar" dir="rtl"><head><link rel="preload" href="/fonts/GraphikArabic-Bold.ttf" as="font" type="font/ttf" crossOrigin="anonymous" /></head><body>{children}<MotionController /></body></html>;
 }

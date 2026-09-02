@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function NotFound() {
   return (
     <main className="not-found-scene">
@@ -5,13 +7,13 @@ export default function NotFound() {
       <div className="noise" aria-hidden="true" />
 
       <header className="not-found-header">
-        <a className="not-found-brand" href="/" aria-label="العودة إلى فَرْق">
+        <Link className="not-found-brand" href="/" aria-label="العودة إلى فَرْق">
           <i aria-hidden="true" />
           <span>
             <b>فَرْق</b>
             <small>بيت إبداعي سعودي</small>
           </span>
-        </a>
+        </Link>
         <span className="not-found-code">ERROR / 404</span>
       </header>
 
@@ -30,10 +32,10 @@ export default function NotFound() {
           <h1 id="not-found-title">يبدو إنك<br />رحت بعيد.</h1>
           <p>الصفحة اللي تدور عليها مو هنا،<br />بس طريق الرجعة واضح.</p>
           <div className="not-found-actions">
-            <a className="back-home" href="/">
+            <Link className="back-home" href="/">
               <span>ارجع للرئيسية</span>
               <b aria-hidden="true">←</b>
-            </a>
+            </Link>
             <a className="contact-link" href="mailto:info@farqagency.co">تواصل معنا ↗</a>
           </div>
         </div>
